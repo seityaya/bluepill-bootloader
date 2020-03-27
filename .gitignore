@@ -1,5 +1,6 @@
 .pioenvs
 .vscode/.BROWSE.*
+.vscode/*.json
 
 # ignore GNU global files
 GPATH

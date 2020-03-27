@@ -1,15 +1,15 @@
 Import("env", "projenv")
 
 # access to global build environment
-print env
+print(env)
 
 # access to project build environment (is used source files in "src" folder)
-print projenv
+print(projenv)
 
-print "Current build targets", map(str, BUILD_TARGETS)
+print("Current build targets", map(str, BUILD_TARGETS))
 
 # Dump build environment (for debug purpose)
-# print env.Dump()
+# print(env.Dump())
 
 # Convert the built executable in .bin format into UF2 format for flashing via bootloader.
 # e.g. python uf2conv.py --convert --base 0x08004000 --output firmware.uf2 firmware.bin
@@ -47,7 +47,7 @@ env.AddPostAction(
 #
 
 def before_upload(source, target, env):
-    print "before_upload"
+    print("before_upload")
     # do some actions
 
     # call Node.JS or other script
@@ -55,7 +55,7 @@ def before_upload(source, target, env):
 
 
 def after_upload(source, target, env):
-    print "after_upload"
+    print("after_upload")
     # do some actions
 
 #env.AddPreAction("upload", before_upload)
